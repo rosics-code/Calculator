@@ -48,9 +48,7 @@ function deleteLast() {
     if (display.value.length > 0) {
         const lastChar = display.value[display.value.length - 1];
         
-        if (lastChar === '.') {
-            hasDecimal = false;
-        }
+        hasDecimal = (lastChar === '.') ? true : false;
         
         display.value = display.value.slice(0, -1);
         expression = expression.slice(0, -1);
